@@ -2,6 +2,14 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Menu, X, Search } from "lucide-react";
 import { Button } from "./ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 export function Navigation() {
   const { t, language, setLanguage } = useLanguage();
@@ -11,14 +19,6 @@ export function Navigation() {
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "fr" : "en");
   };
-
-  const navItems = [
-    { key: "government", href: "/government" },
-    { key: "residents", href: "/residents" },
-    { key: "visitors", href: "/visitors" },
-    { key: "business", href: "/business" },
-    { key: "iwantto", href: "/i-want-to" },
-  ];
 
   return (
     <nav className="fixed w-full bg-white/95 backdrop-blur-lg z-50 border-b border-cameroon-green after:content-[''] after:block after:h-1 after:bg-gradient-to-r after:from-cameroon-green after:via-cameroon-red after:to-cameroon-yellow">
@@ -37,17 +37,39 @@ export function Navigation() {
             </a>
           </div>
 
-          {/* Desktop menu */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-            {navItems.map((item) => (
-              <a
-                key={item.key}
-                href={item.href}
-                className="text-gray-700 hover:text-cameroon-green transition-colors"
-              >
-                {t(`nav.${item.key}`)}
-              </a>
-            ))}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>{t("nav.government")}</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4">
+                      <li><NavigationMenuLink href="/government/mayors-office">{t("nav.mayorsOffice")}</NavigationMenuLink></li>
+                      <li><NavigationMenuLink href="/government/meet-mayor">{t("nav.meetMayor")}</NavigationMenuLink></li>
+                      <li><NavigationMenuLink href="/government/cabinet">{t("nav.cabinet")}</NavigationMenuLink></li>
+                      <li><NavigationMenuLink href="/government/partner">{t("nav.partner")}</NavigationMenuLink></li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>{t("nav.residents")}</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[400px] gap-3 p-4">
+                      <li><NavigationMenuLink href="/residents/arts-culture">{t("nav.artsCulture")}</NavigationMenuLink></li>
+                      <li><NavigationMenuLink href="/residents/education">{t("nav.education")}</NavigationMenuLink></li>
+                      <li><NavigationMenuLink href="/residents/directions">{t("nav.directions")}</NavigationMenuLink></li>
+                      <li><NavigationMenuLink href="/residents/safety">{t("nav.safety")}</NavigationMenuLink></li>
+                      <li><NavigationMenuLink href="/residents/parks">{t("nav.parks")}</NavigationMenuLink></li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                {/* Add other navigation items similarly */}
+              </NavigationMenuList>
+            </NavigationMenu>
+
             <Button
               variant="ghost"
               onClick={toggleLanguage}
@@ -109,15 +131,19 @@ export function Navigation() {
         }`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-          {navItems.map((item) => (
-            <a
-              key={item.key}
-              href={item.href}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cameroon-green hover:bg-gray-50"
-            >
-              {t(`nav.${item.key}`)}
-            </a>
-          ))}
+          <a
+            href="/government"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cameroon-green hover:bg-gray-50"
+          >
+            {t("nav.government")}
+          </a>
+          <a
+            href="/residents"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cameroon-green hover:bg-gray-50"
+          >
+            {t("nav.residents")}
+          </a>
+          {/* Add other mobile menu items */}
           <Button
             variant="ghost"
             onClick={toggleLanguage}
