@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
+import { Search } from "lucide-react";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -9,34 +10,39 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/cabc010a-8d06-44b3-81fe-d65c1ec580e9.png"
-          alt="Garoua III"
+          src="/lovable-uploads/cc71449f-908f-4f00-a2c5-0401461e5801.png"
+          alt="Garoua City"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in max-w-4xl mx-auto">
+        <img
+          src="/lovable-uploads/43369764-2dc3-4409-957a-f7466442ba0b.png"
+          alt="Garoua III Logo"
+          className="w-32 h-32 mx-auto mb-8"
+        />
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
           {t("hero.title")}
         </h1>
-        <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl sm:text-2xl text-white/90 mb-8">
           {t("hero.subtitle")}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        
+        {/* Search Bar */}
+        <div className="max-w-2xl mx-auto relative">
+          <input
+            type="text"
+            placeholder={t("hero.searchPlaceholder")}
+            className="w-full px-6 py-4 rounded-full text-lg bg-white/95 shadow-lg focus:outline-none focus:ring-2 focus:ring-cameroon-green"
+          />
           <Button
-            size="lg"
-            className="bg-cameroon-green hover:bg-cameroon-green/90 text-white"
+            size="icon"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-cameroon-green hover:bg-cameroon-green/90"
           >
-            {t("cta.invest")}
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="bg-white/10 hover:bg-white/20 text-white border-white"
-          >
-            {t("cta.learn")}
+            <Search className="h-5 w-5" />
           </Button>
         </div>
       </div>
