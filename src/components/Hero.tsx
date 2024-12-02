@@ -19,11 +19,6 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in max-w-4xl mx-auto">
-        <img
-          src="/lovable-uploads/43369764-2dc3-4409-957a-f7466442ba0b.png"
-          alt="Garoua III Logo"
-          className="w-32 h-32 mx-auto mb-8"
-        />
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
           {t("hero.title")}
         </h1>
