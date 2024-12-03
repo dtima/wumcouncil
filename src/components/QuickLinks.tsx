@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Trash2, DollarSign, FileText, Tree, Briefcase } from "lucide-react";
+import { Trash2, DollarSign, FileText, TreePine, Briefcase } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function QuickLinks() {
@@ -9,7 +9,7 @@ export function QuickLinks() {
     { icon: <Trash2 className="h-8 w-8" />, label: t("quickLinks.trash"), href: "/services/trash" },
     { icon: <DollarSign className="h-8 w-8" />, label: t("quickLinks.bills"), href: "/services/bills" },
     { icon: <FileText className="h-8 w-8" />, label: t("quickLinks.permits"), href: "/services/permits" },
-    { icon: <Tree className="h-8 w-8" />, label: t("quickLinks.parks"), href: "/services/parks" },
+    { icon: <TreePine className="h-8 w-8" />, label: t("quickLinks.parks"), href: "/services/parks" },
     { icon: <Briefcase className="h-8 w-8" />, label: t("quickLinks.jobs"), href: "/services/jobs" },
   ];
 
