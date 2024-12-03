@@ -20,6 +20,63 @@ export function Navigation() {
     setLanguage(language === "en" ? "fr" : "en");
   };
 
+  const menuItems = [
+    {
+      trigger: t("nav.government"),
+      items: [
+        { href: "/government/mayors-office", label: t("nav.mayorsOffice") },
+        { href: "/government/meet-mayor", label: t("nav.meetMayor") },
+        { href: "/government/cabinet", label: t("nav.cabinet") },
+        { href: "/government/partner", label: t("nav.partner") },
+      ],
+    },
+    {
+      trigger: t("nav.residents"),
+      items: [
+        { href: "/residents/arts-culture", label: t("nav.artsCulture") },
+        { href: "/residents/education", label: t("nav.education") },
+        { href: "/residents/directions", label: t("nav.directions") },
+        { href: "/residents/safety", label: t("nav.safety") },
+        { href: "/residents/parks", label: t("nav.parks") },
+      ],
+    },
+    {
+      trigger: t("nav.visitors"),
+      items: [
+        { href: "/visitors/education", label: t("nav.education") },
+        { href: "/visitors/getting-around", label: t("nav.gettingAround") },
+        { href: "/visitors/history", label: t("nav.history") },
+        { href: "/visitors/movements", label: t("nav.movements") },
+        { href: "/visitors/parks", label: t("nav.parks") },
+        { href: "/visitors/things-to-do", label: t("nav.thingsToDo") },
+      ],
+    },
+    {
+      trigger: t("nav.business"),
+      items: [
+        { href: "/business/licenses", label: t("nav.licenses") },
+        { href: "/business/suppliers", label: t("nav.suppliers") },
+        { href: "/business/grants", label: t("nav.grants") },
+        { href: "/business/zoning", label: t("nav.zoning") },
+        { href: "/business/bids", label: t("nav.bids") },
+        { href: "/business/permits", label: t("nav.onlinePermits") },
+        { href: "/business/start", label: t("nav.startBusiness") },
+      ],
+    },
+    {
+      trigger: t("nav.iwantto"),
+      items: [
+        { href: "/i-want-to/ceremonial", label: t("nav.ceremonial") },
+        { href: "/i-want-to/find-business", label: t("nav.findBusiness") },
+        { href: "/i-want-to/business-license", label: t("nav.businessLicense") },
+        { href: "/i-want-to/events-permit", label: t("nav.eventsPermit") },
+        { href: "/i-want-to/apply-job", label: t("nav.applyJob") },
+        { href: "/i-want-to/forms", label: t("nav.forms") },
+        { href: "/i-want-to/faqs", label: t("nav.faqs") },
+      ],
+    },
+  ];
+
   return (
     <nav className="fixed w-full bg-white/95 backdrop-blur-lg z-50 border-b border-cameroon-green after:content-[''] after:block after:h-1 after:bg-gradient-to-r after:from-cameroon-green after:via-cameroon-red after:to-cameroon-yellow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,32 +98,25 @@ export function Navigation() {
           <div className="hidden md:flex md:items-center md:space-x-6">
             <NavigationMenu>
               <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>{t("nav.government")}</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4">
-                      <li><NavigationMenuLink href="/government/mayors-office">{t("nav.mayorsOffice")}</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/government/meet-mayor">{t("nav.meetMayor")}</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/government/cabinet">{t("nav.cabinet")}</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/government/partner">{t("nav.partner")}</NavigationMenuLink></li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>{t("nav.residents")}</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4">
-                      <li><NavigationMenuLink href="/residents/arts-culture">{t("nav.artsCulture")}</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/residents/education">{t("nav.education")}</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/residents/directions">{t("nav.directions")}</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/residents/safety">{t("nav.safety")}</NavigationMenuLink></li>
-                      <li><NavigationMenuLink href="/residents/parks">{t("nav.parks")}</NavigationMenuLink></li>
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                {/* Add other navigation items similarly */}
+                {menuItems.map((item) => (
+                  <NavigationMenuItem key={item.trigger}>
+                    <NavigationMenuTrigger>{item.trigger}</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid w-[400px] gap-3 p-4">
+                        {item.items.map((subItem) => (
+                          <li key={subItem.href}>
+                            <NavigationMenuLink
+                              href={subItem.href}
+                              className="block p-2 hover:bg-accent rounded-md"
+                            >
+                              {subItem.label}
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
 
@@ -131,19 +181,22 @@ export function Navigation() {
         }`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-          <a
-            href="/government"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cameroon-green hover:bg-gray-50"
-          >
-            {t("nav.government")}
-          </a>
-          <a
-            href="/residents"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-cameroon-green hover:bg-gray-50"
-          >
-            {t("nav.residents")}
-          </a>
-          {/* Add other mobile menu items */}
+          {menuItems.map((item) => (
+            <div key={item.trigger} className="space-y-2">
+              <div className="px-3 py-2 text-base font-medium text-gray-700">
+                {item.trigger}
+              </div>
+              {item.items.map((subItem) => (
+                <a
+                  key={subItem.href}
+                  href={subItem.href}
+                  className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-cameroon-green hover:bg-gray-50 pl-6"
+                >
+                  {subItem.label}
+                </a>
+              ))}
+            </div>
+          ))}
           <Button
             variant="ghost"
             onClick={toggleLanguage}
