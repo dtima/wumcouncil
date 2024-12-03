@@ -1,6 +1,7 @@
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
+import { QuickLinks } from "@/components/QuickLinks";
 
 const Index = () => {
   return (
@@ -8,6 +9,7 @@ const Index = () => {
       <div className="min-h-screen bg-white">
         <Navigation />
         <Hero />
+        <QuickLinks />
       </div>
     </LanguageProvider>
   );
