@@ -35,7 +35,11 @@ const translations = {
     "quickLinks.jobs": "Jobs",
     "programs.title": "Programs & Priorities",
     "programs.agenda": "Moving Garoua III Forward Agenda",
+    "programs.agendaDescription": "Our strategic vision and key initiatives for advancing Garoua III's development and prosperity.",
+    "programs.learnMore": "Learn More",
     "programs.projects": "Ongoing Projects",
+    "programs.projectsDescription": "Discover the current projects that are shaping the future of our community.",
+    "programs.viewProjects": "View Projects",
   },
   fr: {
     "nav.home": "Accueil",
@@ -63,7 +67,11 @@ const translations = {
     "quickLinks.jobs": "Emplois",
     "programs.title": "Programmes et priorités",
     "programs.agenda": "Programme d'action de Garoua III",
+    "programs.agendaDescription": "Notre vision stratégique et nos initiatives clés pour faire progresser le développement et la prospérité de Garoua III.",
+    "programs.learnMore": "En savoir plus",
     "programs.projects": "Projets en cours",
+    "programs.projectsDescription": "Découvrez les projets actuels qui façonnent l'avenir de notre communauté.",
+    "programs.viewProjects": "Voir les projets",
   },
 };
 
