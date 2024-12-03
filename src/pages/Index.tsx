@@ -3,6 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { QuickLinks } from "@/components/QuickLinks";
 import { Programs } from "@/components/Programs";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
         <Hero />
         <QuickLinks />
         <Programs />
+        <Footer />
       </div>
     </LanguageProvider>
   );

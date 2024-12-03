@@ -42,7 +42,18 @@ const translations = {
     "nav.eventsPermit": "Apply for a Special Events Permit",
     "nav.applyJob": "Apply for a Job",
     "nav.forms": "Download Forms",
-    "nav.faqs": "See FAQs"
+    "nav.faqs": "See FAQs",
+    "footer.contact": "Contact Information",
+    "footer.hours": "Mon-Fri: 8:15 am to 5:00 pm",
+    "footer.quickLinks": "Quick Links",
+    "footer.cityDetails": "City Details",
+    "footer.incorporated": "Incorporated: 1947",
+    "footer.population": "Population: 250,000 (2023 est.)",
+    "footer.area": "Area: 180 km²",
+    "footer.followUs": "Follow Us",
+    "footer.taskForce": "Task Force",
+    "footer.fraudReport": "Report Fraud: If you suspect fraud, waste, or abuse, please report it.",
+    "footer.credits": "Website Designed by DTIMA – Connecting People & Government"
   },
   fr: {
     "nav.home": "Accueil",
@@ -77,8 +88,19 @@ const translations = {
     "nav.eventsPermit": "Demander un Permis d'Événement Spécial",
     "nav.applyJob": "Postuler à un Emploi",
     "nav.forms": "Télécharger des Formulaires",
-    "nav.faqs": "Voir la FAQ"
-  },
+    "nav.faqs": "Voir la FAQ",
+    "footer.contact": "Coordonnées",
+    "footer.hours": "Lun-Ven: 8h15 à 17h00",
+    "footer.quickLinks": "Liens Rapides",
+    "footer.cityDetails": "Détails de la Ville",
+    "footer.incorporated": "Fondée en 1947",
+    "footer.population": "Population: 250 000 (est. 2023)",
+    "footer.area": "Superficie: 180 km²",
+    "footer.followUs": "Suivez-nous",
+    "footer.taskForce": "Groupe de Travail",
+    "footer.fraudReport": "Signaler une fraude: Si vous suspectez une fraude, un gaspillage ou un abus, veuillez le signaler.",
+    "footer.credits": "Site Web Conçu par DTIMA – Connecter les Citoyens et le Gouvernement"
+  }
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
