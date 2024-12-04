@@ -2,14 +2,8 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Menu, X, Search } from "lucide-react";
 import { Button } from "./ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { DesktopNav } from "./navigation/DesktopNav";
+import { MobileNav } from "./navigation/MobileNav";
 
 export function Navigation() {
   const { t, language, setLanguage } = useLanguage();
@@ -78,11 +72,11 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="fixed w-full bg-white/95 backdrop-blur-lg z-50 border-b border-cameroon-green after:content-[''] after:block after:h-1 after:bg-gradient-to-r after:from-cameroon-green after:via-cameroon-red after:to-cameroon-yellow">
+    <nav className="fixed w-full bg-white/95 backdrop-blur-lg z-50 border-b border-cameroon-green" role="navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center gap-2">
-            <a href="/" className="flex-shrink-0 flex items-center gap-2">
+            <a href="/" className="flex-shrink-0 flex items-center gap-2" aria-label="Home">
               <img
                 src="/lovable-uploads/43369764-2dc3-4409-957a-f7466442ba0b.png"
                 alt="Garoua III Logo"
@@ -94,36 +88,13 @@ export function Navigation() {
             </a>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <NavigationMenu>
-              <NavigationMenuList>
-                {menuItems.map((item) => (
-                  <NavigationMenuItem key={item.trigger}>
-                    <NavigationMenuTrigger>{item.trigger}</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-3 p-4">
-                        {item.items.map((subItem) => (
-                          <li key={subItem.href}>
-                            <NavigationMenuLink
-                              href={subItem.href}
-                              className="block p-2 hover:bg-accent rounded-md"
-                            >
-                              {subItem.label}
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-
+            <DesktopNav />
             <Button
               variant="ghost"
               onClick={toggleLanguage}
               className="font-semibold"
+              aria-label={`Switch to ${language === "en" ? "French" : "English"}`}
             >
               {language.toUpperCase()}
             </Button>
@@ -131,23 +102,26 @@ export function Navigation() {
               variant="ghost"
               size="icon"
               onClick={() => setShowSearch(!showSearch)}
+              aria-label="Toggle search"
             >
               <Search className="h-5 w-5" />
             </Button>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-4">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setShowSearch(!showSearch)}
+              aria-label="Toggle search"
             >
               <Search className="h-5 w-5" />
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700"
+              aria-expanded={isOpen}
+              aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -155,7 +129,6 @@ export function Navigation() {
         </div>
       </div>
 
-      {/* Search bar */}
       {showSearch && (
         <div className="border-t border-gray-200 py-3 px-4 animate-fade-in">
           <div className="max-w-3xl mx-auto relative">
@@ -163,10 +136,12 @@ export function Navigation() {
               type="text"
               placeholder={t("hero.searchPlaceholder")}
               className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cameroon-green"
+              aria-label="Search"
             />
             <Button
               size="icon"
               className="absolute right-1 top-1/2 -translate-y-1/2 bg-cameroon-green hover:bg-cameroon-green/90"
+              aria-label="Submit search"
             >
               <Search className="h-4 w-4" />
             </Button>
@@ -174,38 +149,7 @@ export function Navigation() {
         </div>
       )}
 
-      {/* Mobile menu */}
-      <div
-        className={`md:hidden ${
-          isOpen ? "block animate-fade-in" : "hidden animate-fade-out"
-        }`}
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-          {menuItems.map((item) => (
-            <div key={item.trigger} className="space-y-2">
-              <div className="px-3 py-2 text-base font-medium text-gray-700">
-                {item.trigger}
-              </div>
-              {item.items.map((subItem) => (
-                <a
-                  key={subItem.href}
-                  href={subItem.href}
-                  className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-cameroon-green hover:bg-gray-50 pl-6"
-                >
-                  {subItem.label}
-                </a>
-              ))}
-            </div>
-          ))}
-          <Button
-            variant="ghost"
-            onClick={toggleLanguage}
-            className="w-full justify-start font-semibold"
-          >
-            {language.toUpperCase()}
-          </Button>
-        </div>
-      </div>
+      <MobileNav isOpen={isOpen} menuItems={menuItems} />
     </nav>
   );
 }
