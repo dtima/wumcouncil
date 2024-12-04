@@ -68,7 +68,16 @@ const translations = {
     "footer.followUs": "Follow Us",
     "footer.taskForce": "Task Force",
     "footer.fraudReport": "Report Fraud: If you suspect fraud, waste, or abuse, please report it.",
-    "footer.credits": "Website Designed by DTIMA – Connecting People & Government"
+    "footer.credits": "Website Designed by DTIMA – Connecting People & Government",
+    "news.title": "Latest News",
+    "news.viewAll": "Visit the Newsroom",
+    "events.title": "Upcoming Events",
+    "events.viewAll": "View All Events",
+    "mayor.sectionTitle": "Serving the City of Garoua III",
+    "mayor.title": "Mayor's Message",
+    "mayor.imageAlt": "Mayor of Garoua III",
+    "mayor.message": "As the Mayor of Garoua III, I am committed to serving our community and building a brighter future for all residents. Our city's rich cultural heritage and dynamic spirit drive us forward as we work together to create positive change.",
+    "mayor.learnMore": "Learn More"
   },
   fr: {
     "hero.title": "Bienvenue à Garoua III",
@@ -129,7 +138,16 @@ const translations = {
     "footer.followUs": "Suivez-nous",
     "footer.taskForce": "Groupe de Travail",
     "footer.fraudReport": "Signaler une fraude: Si vous suspectez une fraude, un gaspillage ou un abus, veuillez le signaler.",
-    "footer.credits": "Site Web Conçu par DTIMA – Connecter les Citoyens et le Gouvernement"
+    "footer.credits": "Site Web Conçu par DTIMA – Connecter les Citoyens et le Gouvernement",
+    "news.title": "Dernières Actualités",
+    "news.viewAll": "Visiter la Salle de Presse",
+    "events.title": "Événements à Venir",
+    "events.viewAll": "Voir Tous les Événements",
+    "mayor.sectionTitle": "Au Service de la Ville de Garoua III",
+    "mayor.title": "Message du Maire",
+    "mayor.imageAlt": "Maire de Garoua III",
+    "mayor.message": "En tant que Maire de Garoua III, je m'engage à servir notre communauté et à construire un avenir meilleur pour tous les résidents. Le riche patrimoine culturel et l'esprit dynamique de notre ville nous poussent à aller de l'avant alors que nous travaillons ensemble pour créer un changement positif.",
+    "mayor.learnMore": "En Savoir Plus"
   }
 };
 
