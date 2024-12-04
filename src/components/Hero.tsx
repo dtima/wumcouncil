@@ -27,7 +27,7 @@ export function Hero() {
         </p>
         
         {/* Search Bar */}
-        <div className="max-w-2xl mx-auto relative">
+        <div className="max-w-2xl mx-auto relative" role="search">
           <input
             type="text"
             placeholder={t("hero.searchPlaceholder")}
