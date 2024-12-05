@@ -4,7 +4,6 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { MessageCircle } from "lucide-react";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useTranslation } from "react-i18next";
 
 const faqs = [
   {
@@ -30,7 +29,6 @@ const faqs = [
 ];
 
 const ChatBot = () => {
-  const { t } = useTranslation();
   const [selectedFaq, setSelectedFaq] = useState<typeof faqs[0] | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -44,7 +42,7 @@ const ChatBot = () => {
         </SheetTrigger>
         <SheetContent className="w-[90vw] sm:w-[540px]">
           <SheetHeader>
-            <SheetTitle>{t("chat.title", "How can we help you?")}</SheetTitle>
+            <SheetTitle>How can we help you?</SheetTitle>
           </SheetHeader>
           <div className="mt-4 h-[80vh] flex flex-col">
             {selectedFaq ? (
@@ -63,10 +61,10 @@ const ChatBot = () => {
               </div>
             ) : (
               <Command className="rounded-lg border shadow-md">
-                <CommandInput placeholder={t("chat.searchPlaceholder", "Search frequently asked questions...")} />
+                <CommandInput placeholder="Search frequently asked questions..." />
                 <CommandList>
                   <CommandEmpty>No results found.</CommandEmpty>
-                  <CommandGroup heading={t("chat.popularQuestions", "Popular Questions")}>
+                  <CommandGroup heading="Popular Questions">
                     <ScrollArea className="h-[60vh]">
                       {faqs.map((faq, index) => (
                         <CommandItem
