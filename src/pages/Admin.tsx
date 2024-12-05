@@ -2,26 +2,11 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@/components/ui/brea
 import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { AdminHeader } from "@/components/admin/AdminHeader";
 import { AdminOverview } from "@/components/admin/AdminOverview";
-import { ContentList } from "@/components/admin/content/ContentList";
+import { NewsManagement } from "@/components/admin/content/NewsManagement";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Routes, Route } from "react-router-dom";
 
 const Admin = () => {
-  const dummyContent = [
-    {
-      id: "1",
-      title: "Welcome to Garoua III",
-      status: "published" as const,
-      lastModified: "2024-02-20",
-    },
-    {
-      id: "2",
-      title: "New Community Center Opening",
-      status: "draft" as const,
-      lastModified: "2024-02-19",
-    },
-  ];
-
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-gray-100">
@@ -47,7 +32,7 @@ const Admin = () => {
                 }
               />
               <Route
-                path="/content/*"
+                path="/content/news"
                 element={
                   <>
                     <Breadcrumb className="mb-4">
@@ -55,10 +40,10 @@ const Admin = () => {
                         <BreadcrumbLink href="/admin-dtima">Dashboard</BreadcrumbLink>
                       </BreadcrumbItem>
                       <BreadcrumbItem>
-                        <BreadcrumbLink>Content Management</BreadcrumbLink>
+                        <BreadcrumbLink>News Management</BreadcrumbLink>
                       </BreadcrumbItem>
                     </Breadcrumb>
-                    <ContentList title="Content Management" items={dummyContent} />
+                    <NewsManagement />
                   </>
                 }
               />
