@@ -41,20 +41,20 @@ export function Events() {
   ];
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="py-8 md:py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">{t("events.title")}</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">{t("events.title")}</h2>
         
-        <div className="space-y-4 mb-8">
+        <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
           {events.map((event) => (
-            <Card key={event.id} className="hover:shadow-lg transition-shadow p-4 flex items-start gap-6">
-              <div className="bg-[#0EA5E9] text-white p-4 rounded text-center min-w-[90px]">
-                <div className="text-lg font-semibold">{event.month}</div>
-                <div className="text-4xl font-bold">{event.day}</div>
+            <Card key={event.id} className="hover:shadow-lg transition-shadow p-3 md:p-4 flex items-start gap-4 md:gap-6">
+              <div className="bg-[#0EA5E9] text-white p-2 md:p-4 rounded text-center min-w-[70px] md:min-w-[90px]">
+                <div className="text-base md:text-lg font-semibold">{event.month}</div>
+                <div className="text-2xl md:text-4xl font-bold">{event.day}</div>
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
-                <p className="text-gray-600">{event.time}</p>
+                <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2">{event.title}</h3>
+                <p className="text-sm md:text-base text-gray-600">{event.time}</p>
               </div>
             </Card>
           ))}
@@ -63,7 +63,7 @@ export function Events() {
         <div className="flex justify-end">
           <Button 
             variant="default" 
-            className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white px-8"
+            className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-white px-6 md:px-8 text-sm md:text-base"
           >
             {t("events.viewAll")}
           </Button>

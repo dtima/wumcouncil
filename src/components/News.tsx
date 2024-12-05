@@ -31,29 +31,29 @@ export function News() {
   ];
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section className="py-8 md:py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold">{t("news.title")}</h2>
-          <Button variant="outline" className="gap-2">
+        <div className="flex justify-between items-center mb-6 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold">{t("news.title")}</h2>
+          <Button variant="outline" className="gap-2 text-sm md:text-base">
             {t("news.viewAll")} <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {newsItems.map((item) => (
             <Card key={item.id} className="hover:shadow-lg transition-shadow">
               <CardHeader className="p-0">
                 <img 
                   src={item.image} 
                   alt={item.title}
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-40 md:h-48 object-cover rounded-t-lg"
                 />
               </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="mb-2">{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-                <p className="text-sm text-gray-500 mt-4">
+              <CardContent className="p-4 md:p-6">
+                <CardTitle className="text-lg md:text-xl mb-2">{item.title}</CardTitle>
+                <CardDescription className="text-sm md:text-base">{item.description}</CardDescription>
+                <p className="text-xs md:text-sm text-gray-500 mt-3 md:mt-4">
                   {new Date(item.date).toLocaleDateString()}
                 </p>
               </CardContent>
