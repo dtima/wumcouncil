@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, FileText, Calendar, MessageSquare } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const stats = [
   {
