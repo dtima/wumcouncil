@@ -12,21 +12,21 @@ export function News() {
       title: "Cultural Festival Success",
       description: "Annual cultural festival brings together diverse communities",
       date: "2024-02-15",
-      image: "/lovable-uploads/9481280f-b006-401c-9b6d-18468ba5c21c.png"
+      image: "/lovable-uploads/cabc010a-8d06-44b3-81fe-d65c1ec580e9.png"
     },
     {
       id: 2,
       title: "New Community Center",
       description: "Mayor inaugurates state-of-the-art community center",
       date: "2024-02-14",
-      image: "/lovable-uploads/9481280f-b006-401c-9b6d-18468ba5c21c.png"
+      image: "/lovable-uploads/cc71449f-908f-4f00-a2c5-0401461e5801.png"
     },
     {
       id: 3,
       title: "Green Initiative Launch",
       description: "City launches ambitious green space development project",
       date: "2024-02-13",
-      image: "/lovable-uploads/9481280f-b006-401c-9b6d-18468ba5c21c.png"
+      image: "/lovable-uploads/cabc010a-8d06-44b3-81fe-d65c1ec580e9.png"
     }
   ];
 
