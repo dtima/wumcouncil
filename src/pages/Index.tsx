@@ -7,6 +7,7 @@ import { News } from "@/components/News";
 import { Events } from "@/components/Events";
 import { MayorNote } from "@/components/MayorNote";
 import { Footer } from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <Events />
         <MayorNote />
         <Footer />
+        <ChatBot />
       </div>
     </LanguageProvider>
   );
