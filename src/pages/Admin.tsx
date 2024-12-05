@@ -3,6 +3,8 @@ import { AdminSidebar } from "@/components/admin/AdminSidebar";
 import { AdminHeader } from "@/components/admin/AdminHeader";
 import { AdminOverview } from "@/components/admin/AdminOverview";
 import { NewsManagement } from "@/components/admin/content/NewsManagement";
+import { EventsManagement } from "@/components/admin/content/EventsManagement";
+import { ProgramsManagement } from "@/components/admin/content/ProgramsManagement";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Routes, Route } from "react-router-dom";
 
@@ -44,6 +46,38 @@ const Admin = () => {
                       </BreadcrumbItem>
                     </Breadcrumb>
                     <NewsManagement />
+                  </>
+                }
+              />
+              <Route
+                path="/content/events"
+                element={
+                  <>
+                    <Breadcrumb className="mb-4">
+                      <BreadcrumbItem>
+                        <BreadcrumbLink href="/admin-dtima">Dashboard</BreadcrumbLink>
+                      </BreadcrumbItem>
+                      <BreadcrumbItem>
+                        <BreadcrumbLink>Events Management</BreadcrumbLink>
+                      </BreadcrumbItem>
+                    </Breadcrumb>
+                    <EventsManagement />
+                  </>
+                }
+              />
+              <Route
+                path="/content/programs"
+                element={
+                  <>
+                    <Breadcrumb className="mb-4">
+                      <BreadcrumbItem>
+                        <BreadcrumbLink href="/admin-dtima">Dashboard</BreadcrumbLink>
+                      </BreadcrumbItem>
+                      <BreadcrumbItem>
+                        <BreadcrumbLink>Programs Management</BreadcrumbLink>
+                      </BreadcrumbItem>
+                    </Breadcrumb>
+                    <ProgramsManagement />
                   </>
                 }
               />
