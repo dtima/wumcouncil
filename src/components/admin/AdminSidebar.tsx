@@ -12,6 +12,8 @@ import {
   Calendar,
   MessageSquare,
   ChevronDown,
+  Newspaper,
+  Link,
 } from "lucide-react";
 
 const sidebarItems = [
@@ -22,18 +24,21 @@ const sidebarItems = [
     active: true 
   },
   { 
-    icon: Users, 
-    label: "Users", 
-    href: "/admin-dtima/users",
+    icon: Newspaper, 
+    label: "Content", 
+    href: "/admin-dtima/content",
     subItems: [
-      { label: "All Users", href: "/admin-dtima/users" },
-      { label: "Add User", href: "/admin-dtima/users/add" },
+      { label: "News Articles", href: "/admin-dtima/content/news" },
+      { label: "Events", href: "/admin-dtima/content/events" },
+      { label: "Programs", href: "/admin-dtima/content/programs" },
+      { label: "Quick Links", href: "/admin-dtima/content/quick-links" },
+      { label: "Mayor Updates", href: "/admin-dtima/content/mayor" },
     ]
   },
   { 
     icon: FileText, 
-    label: "Content", 
-    href: "/admin-dtima/content" 
+    label: "Pages", 
+    href: "/admin-dtima/pages" 
   },
   { 
     icon: Calendar, 
@@ -41,9 +46,9 @@ const sidebarItems = [
     href: "/admin-dtima/events" 
   },
   { 
-    icon: MessageSquare, 
-    label: "Chat", 
-    href: "/admin-dtima/chat" 
+    icon: Link, 
+    label: "Quick Links", 
+    href: "/admin-dtima/quick-links" 
   },
   { 
     icon: Bell, 
