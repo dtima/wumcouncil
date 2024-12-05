@@ -6,9 +6,16 @@ import { NewsManagement } from "@/components/admin/content/NewsManagement";
 import { EventsManagement } from "@/components/admin/content/EventsManagement";
 import { ProgramsManagement } from "@/components/admin/content/ProgramsManagement";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Admin = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log("Current admin route:", location.pathname);
+  }, [location]);
+
   return (
     <LanguageProvider>
       <div className="min-h-screen bg-gray-100">

@@ -14,7 +14,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/admin-dtima" element={<Admin />} />
+          <Route path="/admin-dtima/*" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

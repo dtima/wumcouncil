@@ -4,18 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Plus, X } from "lucide-react";
-
-interface NewsItem {
-  id: string;
-  title: string;
-  content: string;
-  image?: string;
-  status: "draft" | "published";
-  lastModified: string;
-}
+import { useToast } from "@/components/ui/use-toast";
+import { NewsItem } from "@/types/admin";
 
 export function NewsManagement() {
   const [isCreating, setIsCreating] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
   const [newsItems] = useState<NewsItem[]>([
     {
       id: "1",
@@ -33,11 +28,39 @@ export function NewsManagement() {
     },
   ]);
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // Simulated API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Success",
+        description: "News article has been saved successfully.",
+      });
+      setIsCreating(false);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to save news article. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="space-y-6 p-6">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">News Management</h1>
-        <Button onClick={() => setIsCreating(true)} className="flex items-center gap-2">
+        <Button 
+          onClick={() => setIsCreating(true)} 
+          className="flex items-center gap-2"
+          disabled={isSubmitting}
+        >
           <Plus className="h-4 w-4" /> Create News Article
         </Button>
       </div>
@@ -46,17 +69,27 @@ export function NewsManagement() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle className="text-lg">Create News Article</CardTitle>
-            <Button variant="ghost" size="icon" onClick={() => setIsCreating(false)}>
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setIsCreating(false)}
+              disabled={isSubmitting}
+            >
               <X className="h-4 w-4" />
             </Button>
           </CardHeader>
           <CardContent>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="title" className="block text-sm font-medium mb-1">
                   Title
                 </label>
-                <Input id="title" placeholder="Enter article title" />
+                <Input 
+                  id="title" 
+                  placeholder="Enter article title" 
+                  required
+                  disabled={isSubmitting}
+                />
               </div>
               <div>
                 <label htmlFor="content" className="block text-sm font-medium mb-1">
@@ -66,20 +99,43 @@ export function NewsManagement() {
                   id="content"
                   placeholder="Write your article content here..."
                   className="min-h-[200px]"
+                  required
+                  disabled={isSubmitting}
                 />
               </div>
               <div>
                 <label htmlFor="image" className="block text-sm font-medium mb-1">
                   Featured Image
                 </label>
-                <Input id="image" type="file" accept="image/*" />
+                <Input 
+                  id="image" 
+                  type="file" 
+                  accept="image/*"
+                  disabled={isSubmitting}
+                />
               </div>
               <div className="flex justify-end gap-2">
-                <Button variant="outline" onClick={() => setIsCreating(false)}>
+                <Button 
+                  type="button"
+                  variant="outline" 
+                  onClick={() => setIsCreating(false)}
+                  disabled={isSubmitting}
+                >
                   Cancel
                 </Button>
-                <Button>Save Draft</Button>
-                <Button>Publish</Button>
+                <Button 
+                  type="submit" 
+                  variant="outline"
+                  disabled={isSubmitting}
+                >
+                  Save Draft
+                </Button>
+                <Button 
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  Publish
+                </Button>
               </div>
             </form>
           </CardContent>
