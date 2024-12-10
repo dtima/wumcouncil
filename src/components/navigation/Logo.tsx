@@ -6,9 +6,9 @@ export const Logo = () => {
       aria-label="Home"
     >
       <img
-        src="/lovable-uploads/43369764-2dc3-4409-957a-f7466442ba0b.png"
-        alt="Garoua III Logo"
-        className="h-10 w-10"
+        src="/lovable-uploads/4b006aa1-0a89-4e68-bb1e-f3a25902cb23.png"
+        alt="DTIMA Logo"
+        className="h-12 w-12"
         loading="eager"
       />
       <span className="text-xl font-bold text-gray-900">

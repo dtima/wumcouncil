@@ -6,6 +6,7 @@ import { Programs } from "@/components/Programs";
 import { News } from "@/components/News";
 import { Events } from "@/components/Events";
 import { MayorNote } from "@/components/MayorNote";
+import { Partners } from "@/components/Partners";
 import { Footer } from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
 
@@ -20,6 +21,7 @@ const Index = () => {
         <News />
         <Events />
         <MayorNote />
+        <Partners />
         <Footer />
         <ChatBot />
       </div>

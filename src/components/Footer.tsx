@@ -40,6 +40,7 @@ export const Footer = () => {
               <li><a href="#business" className="hover:underline">{t("nav.business")}</a></li>
               <li><a href="#taskforce" className="hover:underline">{t("footer.taskForce")}</a></li>
               <li><a href="#iwantto" className="hover:underline">{t("nav.iwantto")}</a></li>
+              <li><a href="/reports" className="hover:underline">{t("footer.reports")}</a></li>
             </ul>
           </div>
 
@@ -82,4 +83,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-}
+};
