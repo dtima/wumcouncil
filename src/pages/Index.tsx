@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { QuickLinks } from "@/components/QuickLinks";
-import { Programs } from "@/components/Programs";
+import { InvestmentOpportunities } from "@/components/InvestmentOpportunities";
 import { News } from "@/components/News";
 import { Events } from "@/components/Events";
 import { MayorNote } from "@/components/MayorNote";
@@ -15,7 +15,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <QuickLinks />
-      <Programs />
+      <InvestmentOpportunities />
       <News />
       <Events />
       <MayorNote />
