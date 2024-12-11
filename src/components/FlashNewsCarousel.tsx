@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { format } from "date-fns";
-import { newspaper } from "lucide-react";
+import { FileText } from "lucide-react";
 
 const flashNewsData = [
   {
@@ -31,7 +31,7 @@ export function FlashNewsCarousel() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <div className="flex items-center gap-2">
-            <newspaper className="h-6 w-6 text-cameroon-green" />
+            <FileText className="h-6 w-6 text-cameroon-green" />
             <h2 className="text-2xl md:text-3xl font-bold">Flash Info</h2>
           </div>
           <Button 

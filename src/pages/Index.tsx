@@ -9,6 +9,7 @@ import { Partners } from "@/components/Partners";
 import { Footer } from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
 import { FlashNewsCarousel } from "@/components/FlashNewsCarousel";
+import { Programs } from "@/components/Programs";
 
 const Index = () => {
   return (
@@ -16,10 +17,11 @@ const Index = () => {
       <Navigation />
       <Hero />
       <QuickLinks />
-      <FlashNewsCarousel />
+      <Programs />
       <InvestmentOpportunities />
-      <News />
+      <FlashNewsCarousel />
       <Events />
+      <News />
       <MayorNote />
       <Partners />
       <Footer />
