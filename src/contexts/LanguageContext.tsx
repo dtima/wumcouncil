@@ -10,44 +10,31 @@ interface LanguageContextType {
 
 const translations = {
   en: {
-    "hero.searchPlaceholder": "What can we help you find?",
     "nav.government": "Government",
     "nav.residents": "Residents",
     "nav.visitors": "Visitors",
     "nav.business": "Business",
     "nav.meetMayor": "Meet the Mayor",
-    "nav.council": "Municipal Council",
+    "nav.council": "Town Council",
     "nav.partner": "Partners",
     "nav.education": "Education",
     "nav.health": "Health Services",
-    "nav.socialAffairs": "Social Affairs",
+    "nav.socialAffairs": "Social Services",
     "nav.culture": "Culture & Arts",
-    "nav.sports": "Sports & Recreation",
+    "nav.sports": "Sports & Leisure",
     "nav.markets": "Markets",
     "nav.tourism": "Tourism",
     "nav.hotels": "Hotels & Accommodation",
     "nav.restaurants": "Restaurants",
-    "nav.attractions": "Tourist Attractions",
+    "nav.attractions": "Tourist Sites",
     "nav.events": "Events",
     "nav.investment": "Investment Opportunities",
-    "nav.tenders": "Tenders & Procurement",
+    "nav.tenders": "Tenders",
     "nav.licenses": "Licenses & Permits",
     "nav.taxes": "Municipal Taxes",
     "nav.projects": "Development Projects",
-    "nav.pointsOfInterest": "Points of Interest",
-    "poi.hotels": "Hotels",
-    "poi.ngos": "NGOs",
-    "poi.travelAgencies": "Travel Agencies",
-    "poi.restaurants": "Restaurants & Leisure",
-    "poi.markets": "Supermarkets & Markets",
-    "poi.contact": "Contact",
-    "poi.phone": "Phone",
-    "poi.email": "Email",
-    "poi.address": "Address",
-    "poi.slogan": "Slogan",
   },
   fr: {
-    "hero.searchPlaceholder": "Que pouvons-nous vous aider à trouver ?",
     "nav.government": "Gouvernement",
     "nav.residents": "Résidents",
     "nav.visitors": "Visiteurs",
@@ -57,7 +44,7 @@ const translations = {
     "nav.partner": "Partenaires",
     "nav.education": "Éducation",
     "nav.health": "Services de Santé",
-    "nav.socialAffairs": "Affaires Sociales",
+    "nav.socialAffairs": "Services Sociaux",
     "nav.culture": "Culture et Arts",
     "nav.sports": "Sports et Loisirs",
     "nav.markets": "Marchés",
@@ -71,24 +58,13 @@ const translations = {
     "nav.licenses": "Licences et Permis",
     "nav.taxes": "Taxes Municipales",
     "nav.projects": "Projets de Développement",
-    "nav.pointsOfInterest": "Centres d'Intérêt",
-    "poi.hotels": "Hôtels",
-    "poi.ngos": "ONG",
-    "poi.travelAgencies": "Agences de Voyages",
-    "poi.restaurants": "Restaurants & Lieux de Détente",
-    "poi.markets": "Supermarchés et Marchés",
-    "poi.contact": "Contact",
-    "poi.phone": "Téléphone",
-    "poi.email": "Email",
-    "poi.address": "Adresse",
-    "poi.slogan": "Slogan",
   }
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("fr");
+  const [language, setLanguage] = useState<Language>("en"); // Changed default to English
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations.en] || key;
