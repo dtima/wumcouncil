@@ -2,9 +2,8 @@ export const getNavigationItems = (t: (key: string) => string) => [
   {
     trigger: t("nav.government"),
     items: [
-      { href: "/government/mayors-office", label: t("nav.mayorsOffice") },
       { href: "/government/meet-mayor", label: t("nav.meetMayor") },
-      { href: "/government/cabinet", label: t("nav.cabinet") },
+      { href: "/government/council", label: t("nav.council") },
       { href: "/government/partner", label: t("nav.partner") },
     ],
   },

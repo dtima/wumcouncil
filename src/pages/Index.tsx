@@ -2,7 +2,6 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { QuickLinks } from "@/components/QuickLinks";
 import { InvestmentOpportunities } from "@/components/InvestmentOpportunities";
-import { News } from "@/components/News";
 import { Events } from "@/components/Events";
 import { MayorNote } from "@/components/MayorNote";
 import { Partners } from "@/components/Partners";
@@ -21,7 +20,6 @@ const Index = () => {
       <InvestmentOpportunities />
       <FlashNewsCarousel />
       <Events />
-      <News />
       <MayorNote />
       <Partners />
       <Footer />
