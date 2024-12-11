@@ -8,6 +8,7 @@ import { MayorNote } from "@/components/MayorNote";
 import { Partners } from "@/components/Partners";
 import { Footer } from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
+import { FlashNewsCarousel } from "@/components/FlashNewsCarousel";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <QuickLinks />
+      <FlashNewsCarousel />
       <InvestmentOpportunities />
       <News />
       <Events />
