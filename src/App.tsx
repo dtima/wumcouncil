@@ -7,6 +7,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import Admin from "./pages/Admin";
 import FlashNews from "./pages/FlashNews";
+import MeetTheMayor from "./pages/MeetTheMayor";
 
 const App = () => (
   <ErrorBoundary>
@@ -19,6 +20,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/admin-dtima/*" element={<Admin />} />
             <Route path="/flash-news" element={<FlashNews />} />
+            <Route path="/government/meet-mayor" element={<MeetTheMayor />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
