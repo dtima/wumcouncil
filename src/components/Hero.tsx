@@ -10,7 +10,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/b1923bd5-b7dc-4aa5-a49a-bc6cf6440eda.png"
+          src="/lovable-uploads/44e374cf-02e6-4993-bee7-50f6f73c8d7f.png"
           alt="Mokolo City"
           className="w-full h-full object-cover"
         />
