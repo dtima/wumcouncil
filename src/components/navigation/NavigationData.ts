@@ -17,6 +17,7 @@ export const getNavigationItems = (t: (key: string) => string) => [
       { href: "/residents/culture", label: t("nav.culture") },
       { href: "/residents/sports", label: t("nav.sports") },
       { href: "/residents/markets", label: t("nav.markets") },
+      { href: "/residents/points-of-interest", label: t("nav.pointsOfInterest") },
     ],
   },
   {

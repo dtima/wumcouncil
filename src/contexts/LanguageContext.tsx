@@ -34,7 +34,18 @@ const translations = {
     "nav.tenders": "Tenders & Procurement",
     "nav.licenses": "Licenses & Permits",
     "nav.taxes": "Municipal Taxes",
-    "nav.projects": "Development Projects"
+    "nav.projects": "Development Projects",
+    "nav.pointsOfInterest": "Points of Interest",
+    "poi.hotels": "Hotels",
+    "poi.ngos": "NGOs",
+    "poi.travelAgencies": "Travel Agencies",
+    "poi.restaurants": "Restaurants & Leisure",
+    "poi.markets": "Supermarkets & Markets",
+    "poi.contact": "Contact",
+    "poi.phone": "Phone",
+    "poi.email": "Email",
+    "poi.address": "Address",
+    "poi.slogan": "Slogan",
   },
   fr: {
     "hero.searchPlaceholder": "Que pouvons-nous vous aider à trouver ?",
@@ -61,7 +72,18 @@ const translations = {
     "nav.tenders": "Appels d'Offres",
     "nav.licenses": "Licences et Permis",
     "nav.taxes": "Taxes Municipales",
-    "nav.projects": "Projets de Développement"
+    "nav.projects": "Projets de Développement",
+    "nav.pointsOfInterest": "Centres d'Intérêt",
+    "poi.hotels": "Hôtels",
+    "poi.ngos": "ONG",
+    "poi.travelAgencies": "Agences de Voyages",
+    "poi.restaurants": "Restaurants & Lieux de Détente",
+    "poi.markets": "Supermarchés et Marchés",
+    "poi.contact": "Contact",
+    "poi.phone": "Téléphone",
+    "poi.email": "Email",
+    "poi.address": "Adresse",
+    "poi.slogan": "Slogan",
   }
 };
 

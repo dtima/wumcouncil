@@ -6,6 +6,7 @@ import { ErrorBoundary } from "./components/ErrorBoundary";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import Admin from "./pages/Admin";
+import PointsOfInterest from "./pages/PointsOfInterest";
 
 const App = () => (
   <ErrorBoundary>
@@ -17,6 +18,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/admin-dtima/*" element={<Admin />} />
+            <Route path="/residents/points-of-interest" element={<PointsOfInterest />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
