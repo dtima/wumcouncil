@@ -10,8 +10,8 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/lovable-uploads/2411cac4-0b6e-4d5c-8d6a-b6fc1b75b027.png"
-          alt="Wum Council"
+          src="/lovable-uploads/06bfe66a-cfcf-4e86-95b1-63233cc87473.png"
+          alt="Wum Council New Building"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
@@ -27,7 +27,7 @@ export function Hero() {
         <div className="max-w-sm mx-auto sm:max-w-md md:max-w-lg relative" role="search">
           <input
             type="text"
-            placeholder={t("hero.searchPlaceholder")}
+            placeholder="What can we help you find?"
             className="w-full px-4 py-3 md:px-6 md:py-4 rounded-full text-base md:text-lg bg-white/95 shadow-lg focus:outline-none focus:ring-2 focus:ring-cameroon-green"
           />
           <Button

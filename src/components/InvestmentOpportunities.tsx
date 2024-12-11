@@ -7,42 +7,48 @@ export function InvestmentOpportunities() {
     {
       icon: <Building2 className="h-8 w-8 text-cameroon-green" />,
       title: "Infrastructure",
-      description: "Investissez dans le développement des routes, logements et entrepôts modernes.",
+      description: "Be part of Wum's transformation by investing in the development of essential infrastructure, including modern roads, affordable housing, and state-of-the-art warehouses.",
+      link: "/invest/infrastructure"
     },
     {
       icon: <Wheat className="h-8 w-8 text-cameroon-yellow" />,
       title: "Agriculture",
-      description: "Opportunités dans la transformation des produits agricoles et l'agro-industrie.",
+      description: "Unlock the potential of Wum's rich agricultural landscape by investing in the processing of agricultural products and the growth of the agro-industrial sector.",
+      link: "/invest/agriculture"
     },
     {
       icon: <TreePine className="h-8 w-8 text-cameroon-green" />,
-      title: "Tourisme",
-      description: "Développez l'écotourisme autour des Monts Mandara et du patrimoine culturel.",
+      title: "Tourism",
+      description: "Promote Wum's natural beauty and rich cultural heritage by developing eco-tourism projects around iconic landmarks such as the Menchum Falls, volcanic lakes, and cultural sites.",
+      link: "/invest/tourism"
     },
     {
       icon: <Building className="h-8 w-8 text-cameroon-red" />,
-      title: "Commerce",
-      description: "Participez à l'expansion du commerce local et de l'artisanat traditionnel.",
+      title: "Trade",
+      description: "Support the expansion of local trade and traditional crafts. Invest in projects that preserve Wum's cultural identity while creating economic opportunities.",
+      link: "/invest/trade"
     },
     {
       icon: <Sun className="h-8 w-8 text-cameroon-yellow" />,
-      title: "Énergies Renouvelables",
-      description: "Investissez dans le solaire et l'électrification rurale.",
+      title: "Renewable Energy",
+      description: "Contribute to sustainable development by investing in renewable energy solutions, including solar energy projects and rural electrification.",
+      link: "/invest/energy"
     },
     {
       icon: <Heart className="h-8 w-8 text-cameroon-red" />,
-      title: "Santé",
-      description: "Développez des infrastructures de santé modernes pour la communauté.",
-    },
+      title: "Healthcare",
+      description: "Play a vital role in improving community well-being by supporting the development of modern healthcare facilities and services.",
+      link: "/invest/healthcare"
+    }
   ];
 
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Opportunités d'Investissement</h2>
+          <h2 className="text-3xl font-bold mb-4">Investment Opportunities in Wum Council</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Découvrez les secteurs porteurs de Mokolo et participez à son développement économique
+            Discover Wum Council's promising growth sectors and join us in driving sustainable economic development. Together, we can transform Wum into a hub of progress and opportunity.
           </p>
         </div>
 
@@ -64,11 +70,17 @@ export function InvestmentOpportunities() {
                   className="group-hover:bg-cameroon-green group-hover:text-white transition-colors duration-300"
                   asChild
                 >
-                  <a href="/investir">En savoir plus</a>
+                  <a href={sector.link}>Learn More</a>
                 </Button>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+            Join us in building a brighter future for Wum Council. Your investment can make a lasting impact on our community and drive meaningful change.
+          </p>
         </div>
       </div>
     </section>
