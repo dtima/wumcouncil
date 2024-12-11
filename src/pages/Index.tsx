@@ -1,4 +1,3 @@
-import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { QuickLinks } from "@/components/QuickLinks";
@@ -12,20 +11,18 @@ import ChatBot from "@/components/ChatBot";
 
 const Index = () => {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-white">
-        <Navigation />
-        <Hero />
-        <QuickLinks />
-        <Programs />
-        <News />
-        <Events />
-        <MayorNote />
-        <Partners />
-        <Footer />
-        <ChatBot />
-      </div>
-    </LanguageProvider>
+    <div className="min-h-screen bg-white">
+      <Navigation />
+      <Hero />
+      <QuickLinks />
+      <Programs />
+      <News />
+      <Events />
+      <MayorNote />
+      <Partners />
+      <Footer />
+      <ChatBot />
+    </div>
   );
 };
 
