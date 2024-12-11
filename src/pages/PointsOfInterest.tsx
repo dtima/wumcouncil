@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Navigation } from "@/components/Navigation";
 
 interface PointOfInterest {
   name: string;
@@ -24,7 +25,6 @@ const pointsOfInterest: Record<string, PointOfInterest[]> = {
       address: "123 Avenue Principale, Mokolo",
       image: "/lovable-uploads/photo-1649972904349-6e44c42644a7.jpg"
     },
-    // Add more hotels as needed
   ],
   ngos: [
     {
@@ -36,7 +36,6 @@ const pointsOfInterest: Record<string, PointOfInterest[]> = {
       address: "45 Rue de la Solidarité, Mokolo",
       image: "/lovable-uploads/photo-1605810230434-7631ac76ec81.jpg"
     },
-    // Add more NGOs as needed
   ],
   travelAgencies: [
     {
@@ -48,7 +47,6 @@ const pointsOfInterest: Record<string, PointOfInterest[]> = {
       address: "78 Boulevard du Commerce, Mokolo",
       image: "/lovable-uploads/photo-1488590528505-98d2b5aba04b.jpg"
     },
-    // Add more travel agencies as needed
   ],
   restaurants: [
     {
@@ -60,7 +58,6 @@ const pointsOfInterest: Record<string, PointOfInterest[]> = {
       address: "156 Rue des Saveurs, Mokolo",
       image: "/lovable-uploads/photo-1581090464777-f3220bbe1b8b.jpg"
     },
-    // Add more restaurants as needed
   ],
   markets: [
     {
@@ -72,7 +69,6 @@ const pointsOfInterest: Record<string, PointOfInterest[]> = {
       address: "Place du Marché, Centre-ville, Mokolo",
       image: "/lovable-uploads/photo-1504893524553-b855bce32c67.jpg"
     },
-    // Add more markets as needed
   ],
 };
 
@@ -80,55 +76,66 @@ const PointsOfInterest = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="container mx-auto px-4 py-24">
-      <h1 className="text-3xl font-bold text-center mb-8">{t("nav.pointsOfInterest")}</h1>
-      
-      <Tabs defaultValue="hotels" className="w-full">
-        <TabsList className="w-full flex flex-wrap justify-center gap-2 mb-8">
-          <TabsTrigger value="hotels">{t("poi.hotels")}</TabsTrigger>
-          <TabsTrigger value="ngos">{t("poi.ngos")}</TabsTrigger>
-          <TabsTrigger value="travelAgencies">{t("poi.travelAgencies")}</TabsTrigger>
-          <TabsTrigger value="restaurants">{t("poi.restaurants")}</TabsTrigger>
-          <TabsTrigger value="markets">{t("poi.markets")}</TabsTrigger>
-        </TabsList>
+    <div className="min-h-screen bg-white">
+      <Navigation />
+      <div className="container mx-auto px-4 py-24">
+        <h1 className="text-3xl font-bold text-center mb-8">{t("nav.pointsOfInterest")}</h1>
+        
+        <Tabs defaultValue="hotels" className="w-full">
+          <TabsList className="w-full flex flex-wrap justify-center gap-2 mb-8 overflow-x-auto p-1 scrollbar-hide">
+            <TabsTrigger value="hotels" className="whitespace-nowrap">{t("poi.hotels")}</TabsTrigger>
+            <TabsTrigger value="ngos" className="whitespace-nowrap">{t("poi.ngos")}</TabsTrigger>
+            <TabsTrigger value="travelAgencies" className="whitespace-nowrap">{t("poi.travelAgencies")}</TabsTrigger>
+            <TabsTrigger value="restaurants" className="whitespace-nowrap">{t("poi.restaurants")}</TabsTrigger>
+            <TabsTrigger value="markets" className="whitespace-nowrap">{t("poi.markets")}</TabsTrigger>
+          </TabsList>
 
-        {Object.entries(pointsOfInterest).map(([category, items]) => (
-          <TabsContent key={category} value={category}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {items.map((item, index) => (
-                <Card key={index} className="overflow-hidden">
-                  <img 
-                    src={item.image} 
-                    alt={item.name}
-                    className="w-full h-48 object-cover"
-                  />
-                  <CardHeader>
-                    <CardTitle>{item.name}</CardTitle>
-                    <CardDescription className="italic">{item.slogan}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="mb-4 text-gray-600">{item.description}</p>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center gap-2">
-                        <Phone className="h-4 w-4" />
-                        <span>{item.phone}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Mail className="h-4 w-4" />
-                        <span>{item.email}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="h-4 w-4" />
-                        <span>{item.address}</span>
-                      </div>
+          {Object.entries(pointsOfInterest).map(([category, items]) => (
+            <TabsContent key={category} value={category}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {items.map((item, index) => (
+                  <Card key={index} className="overflow-hidden h-full flex flex-col">
+                    <div className="relative h-48 sm:h-56">
+                      <img 
+                        src={item.image} 
+                        alt={item.name}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-        ))}
-      </Tabs>
+                    <CardHeader className="flex-none">
+                      <CardTitle className="text-xl sm:text-2xl">{item.name}</CardTitle>
+                      <CardDescription className="italic text-sm sm:text-base">{item.slogan}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow flex flex-col justify-between gap-4">
+                      <p className="text-gray-600 text-sm sm:text-base">{item.description}</p>
+                      <div className="space-y-2 text-sm sm:text-base">
+                        <a 
+                          href={`tel:${item.phone}`} 
+                          className="flex items-center gap-2 hover:text-cameroon-green transition-colors"
+                        >
+                          <Phone className="h-4 w-4 flex-shrink-0" />
+                          <span>{item.phone}</span>
+                        </a>
+                        <a 
+                          href={`mailto:${item.email}`}
+                          className="flex items-center gap-2 hover:text-cameroon-green transition-colors"
+                        >
+                          <Mail className="h-4 w-4 flex-shrink-0" />
+                          <span className="break-all">{item.email}</span>
+                        </a>
+                        <div className="flex items-center gap-2">
+                          <MapPin className="h-4 w-4 flex-shrink-0" />
+                          <span>{item.address}</span>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
+      </div>
     </div>
   );
 };
