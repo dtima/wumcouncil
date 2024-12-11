@@ -6,13 +6,13 @@ export const Logo = () => {
       aria-label="Home"
     >
       <img
-        src="/lovable-uploads/3a8fc90c-5684-4c2e-81d1-a830208afd9d.png"
-        alt="Mokolo Logo"
+        src="/lovable-uploads/184d2ce1-3d4a-4ac4-bb27-b6025ee4308a.png"
+        alt="Wum Council Logo"
         className="h-12 w-12"
         loading="eager"
       />
       <span className="text-xl font-bold text-gray-900">
-        Mokolo
+        Wum Council
       </span>
     </a>
   );

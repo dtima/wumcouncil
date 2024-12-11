@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src="/lovable-uploads/2411cac4-0b6e-4d5c-8d6a-b6fc1b75b027.png"
-          alt="Mokolo City Hall"
+          alt="Wum Council"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50 md:bg-black/40" />
@@ -20,7 +20,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
-          Bienvenue à la Commune de Mokolo
+          Welcome to the Wum Council
         </h1>
         
         {/* Search Bar */}
