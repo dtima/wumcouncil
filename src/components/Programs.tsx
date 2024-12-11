@@ -10,17 +10,17 @@ export function Programs() {
     {
       title: "Agenda de développement",
       description: "Notre maire fait avancer Mokolo à travers un agenda progressif axé sur l'opportunité, la sécurité publique et l'investissement pour l'avenir.",
-      image: "/lovable-uploads/a01031b6-450d-41a8-9a7d-c5e00d86203c.png"
+      image: "/lovable-uploads/f3f24954-183c-4d8d-90d5-b7e368248769.png"
     },
     {
       title: "Logements de qualité",
       description: "Le plan de logement de la ville est ancré dans la conviction que tous les habitants devraient avoir accès à un logement sûr, de qualité et abordable.",
-      image: "/lovable-uploads/cabc010a-8d06-44b3-81fe-d65c1ec580e9.png"
+      image: "/lovable-uploads/2a4074c1-3d83-45a7-984e-4924b250dc6b.png"
     },
     {
       title: "Année de la Jeunesse",
       description: "2024 est l'année de la jeunesse à Mokolo. Notre initiative vise à équiper tous les jeunes avec les outils et ressources nécessaires pour réussir.",
-      image: "/lovable-uploads/cc71449f-908f-4f00-a2c5-0401461e5801.png"
+      image: "/lovable-uploads/86b57e71-80d4-434c-8465-302772034e7d.png"
     }
   ];
 
