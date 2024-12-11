@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { FileText, Building2, Wrench, Receipt, FileCheck, Heart, Stamp, Ring } from "lucide-react";
+import { FileText, Building2, Wrench, Receipt, FileCheck, Heart, Stamp, Church } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function QuickLinks() {
@@ -11,7 +11,7 @@ export function QuickLinks() {
     { icon: <FileCheck className="h-6 w-6 md:h-8 md:w-8 text-cameroon-red" />, label: "Licences et permis", href: "/services/licenses" },
     { icon: <Stamp className="h-6 w-6 md:h-8 md:w-8 text-cameroon-yellow" />, label: "Timbre communal", href: "/services/stamp" },
     { icon: <Heart className="h-6 w-6 md:h-8 md:w-8 text-cameroon-green" />, label: "Acte de naissance", href: "/services/birth-certificate" },
-    { icon: <Ring className="h-6 w-6 md:h-8 md:w-8 text-cameroon-red" />, label: "Mariage", href: "/services/marriage" },
+    { icon: <Church className="h-6 w-6 md:h-8 md:w-8 text-cameroon-red" />, label: "Mariage", href: "/services/marriage" },
   ];
 
   return (
