@@ -6,13 +6,13 @@ export const Logo = () => {
       aria-label="Home"
     >
       <img
-        src="/lovable-uploads/4b006aa1-0a89-4e68-bb1e-f3a25902cb23.png"
-        alt="DTIMA Logo"
+        src="/lovable-uploads/3a8fc90c-5684-4c2e-81d1-a830208afd9d.png"
+        alt="Mokolo Logo"
         className="h-12 w-12"
         loading="eager"
       />
       <span className="text-xl font-bold text-gray-900">
-        Garoua III
+        Mokolo
       </span>
     </a>
   );
