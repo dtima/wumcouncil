@@ -3,7 +3,7 @@ export const getNavigationItems = (t: (key: string) => string) => [
     trigger: t("nav.government"),
     items: [
       { href: "/government/meet-mayor", label: t("nav.meetMayor") },
-      { href: "/government/council", label: t("nav.council") },
+      { href: "/government/executive-offices", label: t("nav.executiveOffices") },
       { href: "/government/partner", label: t("nav.partner") },
     ],
   },
