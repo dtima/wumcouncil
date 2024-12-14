@@ -8,19 +8,25 @@ import { FileText } from "lucide-react";
 const flashNewsData = [
   {
     id: 1,
-    title: "Inauguration du nouveau marché",
-    description: "Le maire inaugure le nouveau marché central de Mokolo",
-    date: "2024-03-15",
-    image: "/lovable-uploads/cabc010a-8d06-44b3-81fe-d65c1ec580e9.png"
+    title: "Mayor Represents Wum at European Parliament",
+    description: "Lord Mayor Dighambong Anthony Mvo attended a crucial session at the European Parliament, strengthening international partnerships and discussing development opportunities for Wum municipality.",
+    date: "2024-03-20",
+    image: "/lovable-uploads/7e67adfb-95f6-4e9f-9e42-75ba332bcd80.png"
   },
   {
     id: 2,
-    title: "Campagne de vaccination",
-    description: "Lancement d'une campagne de vaccination gratuite",
-    date: "2024-03-14",
-    image: "/lovable-uploads/cc71449f-908f-4f00-a2c5-0401461e5801.png"
+    title: "Council Executive Session Advances Development Plans",
+    description: "The Wum Council held a productive working session to discuss and approve key development initiatives for the municipality, focusing on infrastructure and community services.",
+    date: "2024-03-18",
+    image: "/lovable-uploads/fc9b420c-cd58-49ee-88cf-5ea693f50db5.png"
   },
-  // Add more flash news items here
+  {
+    id: 3,
+    title: "Mayor Leads Municipal Inspection Tour",
+    description: "Lord Mayor Dighambong Anthony Mvo, accompanied by council officials, conducted an extensive inspection of ongoing development projects across Wum municipality.",
+    date: "2024-03-15",
+    image: "/lovable-uploads/fd76049e-a2ee-424f-bfea-78d94c1a6eb9.png"
+  }
 ];
 
 export function FlashNewsCarousel() {
