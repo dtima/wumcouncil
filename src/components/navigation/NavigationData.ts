@@ -10,13 +10,14 @@ export const getNavigationItems = (t: (key: string) => string) => [
   {
     trigger: t("nav.residents"),
     items: [
-      { href: "/practical-guide", label: "Practical Guide" },
-      { href: "/residents/education", label: t("nav.education") },
-      { href: "/residents/health", label: t("nav.health") },
-      { href: "/residents/social-affairs", label: t("nav.socialAffairs") },
-      { href: "/residents/culture", label: t("nav.culture") },
-      { href: "/residents/sports", label: t("nav.sports") },
-      { href: "/residents/markets", label: t("nav.markets") },
+      { href: "/practical-guide", label: "Points of Interest" },
+      { href: "/residents/education", label: "Education" },
+      { href: "/residents/health", label: "Health Services" },
+      { href: "/residents/social", label: "Social Services" },
+      { href: "/residents/security", label: "Security" },
+      { href: "/residents/culture", label: "Culture & Arts" },
+      { href: "/residents/sports", label: "Sports & Leisure" },
+      { href: "/residents/markets", label: "Markets" },
     ],
   },
   {
