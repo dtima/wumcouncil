@@ -13,10 +13,10 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg md:text-xl font-bold">{t("footer.contact")}</h3>
             <div className="space-y-2">
-              <p className="font-bold text-sm md:text-base">Garoua III City Hall</p>
+              <p className="font-bold text-sm md:text-base">Wum Council</p>
               <div className="flex items-center gap-2 text-sm md:text-base">
                 <MapPin className="h-4 w-4" />
-                <p>55 Trinity Ave SW</p>
+                <p>North West Region, Cameroon</p>
               </div>
               <div className="flex items-center gap-2 text-sm md:text-base">
                 <Phone className="h-4 w-4" />
@@ -24,9 +24,9 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-sm md:text-base">
                 <Mail className="h-4 w-4" />
-                <p>contact@garoua3.cm</p>
+                <p>contact@wumcouncil.cm</p>
               </div>
-              <p className="text-sm md:text-base">{t("footer.hours")}</p>
+              <p className="text-sm md:text-base">P.O. Box 9 Wum</p>
             </div>
           </div>
 
@@ -34,24 +34,24 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg md:text-xl font-bold">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2 text-sm md:text-base">
-              <li><a href="#government" className="hover:underline">{t("nav.government")}</a></li>
-              <li><a href="#residents" className="hover:underline">{t("nav.residents")}</a></li>
-              <li><a href="#visitors" className="hover:underline">{t("nav.visitors")}</a></li>
-              <li><a href="#business" className="hover:underline">{t("nav.business")}</a></li>
-              <li><a href="#taskforce" className="hover:underline">{t("footer.taskForce")}</a></li>
-              <li><a href="#iwantto" className="hover:underline">{t("nav.iwantto")}</a></li>
-              <li><a href="/reports" className="hover:underline">{t("footer.reports")}</a></li>
+              <li><a href="/government/meet-mayor" className="hover:underline">{t("nav.meetMayor")}</a></li>
+              <li><a href="/government/executive-offices" className="hover:underline">{t("nav.executiveOffices")}</a></li>
+              <li><a href="/visitors/tourism" className="hover:underline">{t("nav.tourism")}</a></li>
+              <li><a href="/flash-news" className="hover:underline">{t("nav.news")}</a></li>
+              <li><a href="/business/investment" className="hover:underline">{t("nav.investment")}</a></li>
             </ul>
           </div>
 
-          {/* City Details */}
+          {/* Important Services */}
           <div className="space-y-4">
-            <h3 className="text-lg md:text-xl font-bold">{t("footer.cityDetails")}</h3>
-            <p className="text-sm md:text-base">{t("footer.incorporated")}</p>
-            <div className="space-y-2 text-sm md:text-base">
-              <p>{t("footer.population")}</p>
-              <p>{t("footer.area")}</p>
-            </div>
+            <h3 className="text-lg md:text-xl font-bold">{t("footer.services")}</h3>
+            <ul className="space-y-2 text-sm md:text-base">
+              <li><a href="/residents/education" className="hover:underline">{t("nav.education")}</a></li>
+              <li><a href="/residents/health" className="hover:underline">{t("nav.health")}</a></li>
+              <li><a href="/residents/markets" className="hover:underline">{t("nav.markets")}</a></li>
+              <li><a href="/business/licenses" className="hover:underline">{t("nav.licenses")}</a></li>
+              <li><a href="/business/taxes" className="hover:underline">{t("nav.taxes")}</a></li>
+            </ul>
           </div>
 
           {/* Social Media */}
@@ -78,7 +78,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm">
           <p>{t("footer.fraudReport")}</p>
-          <p>{t("footer.credits")}</p>
+          <p>&copy; {new Date().getFullYear()} Wum Council. {t("footer.credits")}</p>
         </div>
       </div>
     </footer>
