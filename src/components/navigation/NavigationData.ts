@@ -10,7 +10,7 @@ export const getNavigationItems = (t: (key: string) => string) => [
   {
     trigger: t("nav.residents"),
     items: [
-      { href: "/points-of-interest", label: "Points of Interest" },
+      { href: "/residents-guide", label: "Resident's Guide" },
     ],
   },
   {

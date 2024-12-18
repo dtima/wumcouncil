@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { MapPin, Hotel, Utensils, Camera, Calendar, GraduationCap, Heart, Handshake, Shield, Music, Trophy, ShoppingBag } from "lucide-react";
+import { MapPin, Hotel, Utensils, Camera, Calendar } from "lucide-react";
 
 const PracticalGuide = () => {
   const { t } = useLanguage();
@@ -40,51 +40,12 @@ const PracticalGuide = () => {
     }
   ];
 
-  const residentGuides = [
-    {
-      title: "Education",
-      icon: <GraduationCap className="h-5 w-5" />,
-      content: "Access information about local schools, educational programs, and learning resources."
-    },
-    {
-      title: "Health Services",
-      icon: <Heart className="h-5 w-5" />,
-      content: "Find healthcare facilities, medical services, and emergency contacts."
-    },
-    {
-      title: "Social Services",
-      icon: <Handshake className="h-5 w-5" />,
-      content: "Learn about community support programs and social welfare services."
-    },
-    {
-      title: "Security",
-      icon: <Shield className="h-5 w-5" />,
-      content: "Stay informed about local security measures and emergency contacts."
-    },
-    {
-      title: "Culture & Arts",
-      icon: <Music className="h-5 w-5" />,
-      content: "Explore local cultural activities, art exhibitions, and traditional events."
-    },
-    {
-      title: "Sports & Leisure",
-      icon: <Trophy className="h-5 w-5" />,
-      content: "Discover sports facilities, recreational activities, and leisure opportunities."
-    },
-    {
-      title: "Markets",
-      icon: <ShoppingBag className="h-5 w-5" />,
-      content: "Find information about local markets, shopping centers, and business hours."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
       <main className="container mx-auto px-4 py-24">
         <div className="max-w-4xl mx-auto space-y-12">
-          {/* Visitors Section */}
           <section>
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Visitor's Guide</h2>
             <p className="text-gray-600 mb-6">Discover Wum's tourist services and attractions</p>
@@ -92,26 +53,6 @@ const PracticalGuide = () => {
             <Accordion type="single" collapsible className="w-full">
               {visitorGuides.map((guide, index) => (
                 <AccordionItem key={index} value={`visitor-item-${index}`}>
-                  <AccordionTrigger className="flex items-center gap-3">
-                    {guide.icon}
-                    {guide.title}
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4">
-                    {guide.content}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </section>
-
-          {/* Residents Section */}
-          <section>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Resident's Guide</h2>
-            <p className="text-gray-600 mb-6">Discover Wum's main points of interest and services</p>
-            
-            <Accordion type="single" collapsible className="w-full">
-              {residentGuides.map((guide, index) => (
-                <AccordionItem key={index} value={`resident-item-${index}`}>
                   <AccordionTrigger className="flex items-center gap-3">
                     {guide.icon}
                     {guide.title}

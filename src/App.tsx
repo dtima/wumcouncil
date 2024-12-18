@@ -12,7 +12,7 @@ import MeetTheMayor from "./pages/MeetTheMayor";
 import ExecutiveOffices from "./pages/ExecutiveOffices";
 import Tourism from "./pages/Tourism";
 import PracticalGuide from "./pages/PracticalGuide";
-import PointsOfInterest from "./pages/PointsOfInterest";
+import ResidentsGuide from "./pages/ResidentsGuide";
 
 const App = () => (
   <BrowserRouter>
@@ -27,9 +27,8 @@ const App = () => (
             <Route path="/flash-news" element={<FlashNews />} />
             <Route path="/government/meet-mayor" element={<MeetTheMayor />} />
             <Route path="/government/executive-offices" element={<ExecutiveOffices />} />
-            <Route path="/visitors/tourism" element={<Tourism />} />
             <Route path="/practical-guide" element={<PracticalGuide />} />
-            <Route path="/points-of-interest" element={<PointsOfInterest />} />
+            <Route path="/residents-guide" element={<ResidentsGuide />} />
           </Routes>
         </TooltipProvider>
       </LanguageProvider>
