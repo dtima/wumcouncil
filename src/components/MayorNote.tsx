@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export function MayorNote() {
   const { t } = useLanguage();
@@ -23,9 +24,11 @@ export function MayorNote() {
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
               {t("mayor.message")}
             </p>
-            <Button className="mt-4 md:mt-6 bg-cameroon-green hover:bg-cameroon-green/90 text-sm md:text-base">
-              {t("mayor.learnMore")}
-            </Button>
+            <Link to="/government/mayor-biography">
+              <Button className="mt-4 md:mt-6 bg-cameroon-green hover:bg-cameroon-green/90 text-sm md:text-base">
+                {t("mayor.learnMore")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
