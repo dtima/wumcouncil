@@ -13,6 +13,7 @@ import ExecutiveOffices from "./pages/ExecutiveOffices";
 import Tourism from "./pages/Tourism";
 import PracticalGuide from "./pages/PracticalGuide";
 import ResidentsGuide from "./pages/ResidentsGuide";
+import InvestmentOpportunities from "./pages/InvestmentOpportunities";
 
 const App = () => (
   <BrowserRouter>
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/government/executive-offices" element={<ExecutiveOffices />} />
             <Route path="/practical-guide" element={<PracticalGuide />} />
             <Route path="/residents-guide" element={<ResidentsGuide />} />
+            <Route path="/business/investment" element={<InvestmentOpportunities />} />
           </Routes>
         </TooltipProvider>
       </LanguageProvider>

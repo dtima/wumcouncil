@@ -78,7 +78,8 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm">
           <p>{t("footer.fraudReport")}</p>
-          <p>&copy; {new Date().getFullYear()} Wum Council. {t("footer.credits")}</p>
+          <p>2025 © Wum Council</p>
+          <p className="text-sm">Website Designed by DTIMA – Connecting People & Government</p>
         </div>
       </div>
     </footer>

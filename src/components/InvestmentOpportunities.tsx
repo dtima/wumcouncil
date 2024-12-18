@@ -8,37 +8,37 @@ export function InvestmentOpportunities() {
       icon: <Building2 className="h-8 w-8 text-cameroon-green" />,
       title: "Infrastructure",
       description: "Be part of Wum's transformation by investing in the development of essential infrastructure, including modern roads, affordable housing, and state-of-the-art warehouses.",
-      link: "/invest/infrastructure"
+      link: "/business/investment"
     },
     {
       icon: <Wheat className="h-8 w-8 text-cameroon-yellow" />,
       title: "Agriculture",
       description: "Unlock the potential of Wum's rich agricultural landscape by investing in the processing of agricultural products and the growth of the agro-industrial sector.",
-      link: "/invest/agriculture"
+      link: "/business/investment"
     },
     {
       icon: <TreePine className="h-8 w-8 text-cameroon-green" />,
       title: "Tourism",
       description: "Promote Wum's natural beauty and rich cultural heritage by developing eco-tourism projects around iconic landmarks such as the Menchum Falls, volcanic lakes, and cultural sites.",
-      link: "/invest/tourism"
+      link: "/business/investment"
     },
     {
       icon: <Building className="h-8 w-8 text-cameroon-red" />,
       title: "Trade",
       description: "Support the expansion of local trade and traditional crafts. Invest in projects that preserve Wum's cultural identity while creating economic opportunities.",
-      link: "/invest/trade"
+      link: "/business/investment"
     },
     {
       icon: <Sun className="h-8 w-8 text-cameroon-yellow" />,
       title: "Renewable Energy",
       description: "Contribute to sustainable development by investing in renewable energy solutions, including solar energy projects and rural electrification.",
-      link: "/invest/energy"
+      link: "/business/investment"
     },
     {
       icon: <Heart className="h-8 w-8 text-cameroon-red" />,
       title: "Healthcare",
       description: "Play a vital role in improving community well-being by supporting the development of modern healthcare facilities and services.",
-      link: "/invest/healthcare"
+      link: "/business/investment"
     }
   ];
 
