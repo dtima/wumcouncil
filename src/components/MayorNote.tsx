@@ -12,7 +12,7 @@ export function MayorNote() {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="relative order-2 md:order-1">
             <img
-              src="/lovable-uploads/7c65c822-eb17-4dbc-b1eb-a2eb38cdb851.png"
+              src="/lovable-uploads/3ac64ce7-499a-485f-a3bb-afcf1375acef.png"
               alt={t("mayor.imageAlt")}
               className="w-full rounded-lg shadow-xl"
             />
