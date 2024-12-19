@@ -19,24 +19,24 @@ const flashNewsData = [
   },
   {
     id: 3,
-    title: "New Municipal Center Development",
-    description: "The Wum Council unveils plans for a modern three-story municipal center designed by POLARIS DESIGN. The facility will serve as a 'Gateway' to Wum, featuring council chambers, meeting halls, and public service areas.",
+    title: "Lions of Salam FC Wins Peace Tournament",
+    description: "Lions of Salam FC emerged victorious in the 6th edition of the Wum Council Peace and Unity Tournament, defeating St Martin's FC 3-2 in an exciting final at the Wum Municipal Stadium.",
     date: "2024-03-15",
-    image: "/lovable-uploads/67fcc573-766a-4768-b8bf-29fa58ff7cb4.png"
+    image: "/lovable-uploads/2c4c6492-71b4-4f82-be64-0ba827581423.png"
   },
   {
     id: 4,
-    title: "Livestock Farmers Receive Awards",
-    description: "The Wum Council, in collaboration with the Ministry of Livestock, awarded prizes to outstanding livestock farmers. Winners in cattle rearing and poultry farming categories received equipment to support their operations.",
+    title: "PWD Group Leads Community Cleanup",
+    description: "Persons with Disabilities in Wum demonstrated remarkable community spirit by organizing and conducting a cleanup campaign around the Divisional Delegation of Social Affairs, inspiring local residents.",
     date: "2024-03-12",
-    image: "/lovable-uploads/2404a4e3-32f8-4642-b2f7-a8a9ebc8f526.png"
+    image: "/lovable-uploads/b4ab82ac-687d-4d0b-a4a8-2912db097da3.png"
   },
   {
     id: 5,
-    title: "Clean-up Campaign Launched",
-    description: "A major clean-up operation has been initiated to improve sanitation and waste management in the municipality, focusing on market areas and major junctions to enhance public health and commerce.",
+    title: "New Municipal Center Development",
+    description: "The Wum Council unveils plans for a modern three-story municipal center designed by POLARIS DESIGN. The facility will serve as a 'Gateway' to Wum, featuring council chambers, meeting halls, and public service areas.",
     date: "2024-03-10",
-    image: "/lovable-uploads/51042e71-dcba-478b-9fbf-2d916289a959.png"
+    image: "/lovable-uploads/67fcc573-766a-4768-b8bf-29fa58ff7cb4.png"
   }
 ];
 
