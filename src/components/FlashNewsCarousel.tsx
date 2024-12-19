@@ -45,7 +45,7 @@ export function FlashNewsCarousel() {
             onClick={() => navigate("/flash-news")}
             className="hover:bg-cameroon-green hover:text-white transition-colors"
           >
-            Voir tout
+            View all
           </Button>
         </div>
 

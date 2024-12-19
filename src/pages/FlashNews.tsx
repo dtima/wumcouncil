@@ -5,17 +5,17 @@ import { format } from "date-fns";
 const flashNewsData = [
   {
     id: 1,
-    title: "Mayor Inspects Development Projects",
-    description: "Lord Mayor Dighambong Anthony Mvo conducted a comprehensive inspection of ongoing construction projects across Wum municipality, including roads, classrooms, agricultural facilities, and the women's empowerment center.",
+    title: "Mayor Represents Wum at European Parliament",
+    description: "Lord Mayor Dighambong Anthony Mvo attended a crucial session at the European Parliament, strengthening international partnerships and discussing development opportunities for Wum municipality.",
     date: "2024-03-20",
-    image: "/lovable-uploads/171abf4e-62b4-424a-b987-27e75b3f0d4f.png"
+    image: "/lovable-uploads/7e67adfb-95f6-4e9f-9e42-75ba332bcd80.png"
   },
   {
     id: 2,
-    title: "Solar Street Lights Installation Complete",
-    description: "A major solar street lighting project has been successfully completed in Wum municipality, enhancing safety and accessibility while promoting sustainable energy solutions. The project was officially inaugurated by the SDO of Menchum Division.",
+    title: "Council Executive Session Advances Development Plans",
+    description: "The Wum Council held a productive working session to discuss and approve key development initiatives for the municipality, focusing on infrastructure and community services.",
     date: "2024-03-18",
-    image: "/lovable-uploads/a4aee135-5b38-499d-b020-6eaf4364e1c5.png"
+    image: "/lovable-uploads/fc9b420c-cd58-49ee-88cf-5ea693f50db5.png"
   },
   {
     id: 3,
