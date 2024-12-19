@@ -12,13 +12,27 @@ const flashNewsData = [
   },
   {
     id: 2,
-    title: "Livestock Farmers Receive Awards",
-    description: "The Wum Council, in collaboration with the Ministry of Livestock, awarded prizes to outstanding livestock farmers. Winners in cattle rearing and poultry farming categories received equipment to support their operations.",
-    date: "2024-03-15",
-    image: "/lovable-uploads/2404a4e3-32f8-4642-b2f7-a8a9ebc8f526.png"
+    title: "Solar Street Lights Installation Complete",
+    description: "A major solar street lighting project has been successfully completed in Wum municipality, enhancing safety and accessibility while promoting sustainable energy solutions. The project was officially inaugurated by the SDO of Menchum Division.",
+    date: "2024-03-18",
+    image: "/lovable-uploads/a4aee135-5b38-499d-b020-6eaf4364e1c5.png"
   },
   {
     id: 3,
+    title: "New Municipal Center Development",
+    description: "The Wum Council unveils plans for a modern three-story municipal center designed by POLARIS DESIGN. The facility will serve as a 'Gateway' to Wum, featuring council chambers, meeting halls, and public service areas.",
+    date: "2024-03-15",
+    image: "/lovable-uploads/67fcc573-766a-4768-b8bf-29fa58ff7cb4.png"
+  },
+  {
+    id: 4,
+    title: "Livestock Farmers Receive Awards",
+    description: "The Wum Council, in collaboration with the Ministry of Livestock, awarded prizes to outstanding livestock farmers. Winners in cattle rearing and poultry farming categories received equipment to support their operations.",
+    date: "2024-03-12",
+    image: "/lovable-uploads/2404a4e3-32f8-4642-b2f7-a8a9ebc8f526.png"
+  },
+  {
+    id: 5,
     title: "Clean-up Campaign Launched",
     description: "A major clean-up operation has been initiated to improve sanitation and waste management in the municipality, focusing on market areas and major junctions to enhance public health and commerce.",
     date: "2024-03-10",
