@@ -21,9 +21,21 @@ const ExecutiveOffices = () => {
       
       <main className="pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
             Executive Offices
           </h1>
+
+          {/* Organizational Chart */}
+          <div className="mb-16 overflow-x-auto">
+            <div className="min-w-[1000px] p-8 bg-white rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold text-center mb-8">WUM COUNCIL ORGANIGRAM</h2>
+              <img 
+                src="/lovable-uploads/18e901e9-2d96-43c5-93ac-1a07cb495ddf.png"
+                alt="Wum Council Organizational Chart"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member) => (
