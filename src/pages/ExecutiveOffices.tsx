@@ -25,72 +25,51 @@ const ExecutiveOffices = () => {
             Executive Offices
           </h1>
 
-          {/* Organizational Chart */}
           <div className="mb-16 overflow-x-auto">
             <div className="min-w-[1000px] p-8 bg-white rounded-lg shadow-md">
               <h2 className="text-2xl font-bold text-center mb-8">WUM COUNCIL ORGANIGRAM</h2>
               
-              <div className="organigram">
+              <div className="relative before:content-[''] before:absolute before:top-[60px] before:left-1/2 before:h-[calc(100%-100px)] before:w-0.5 before:bg-slate-300 before:z-0">
                 {/* Level 1 - Mayor */}
                 <div className="flex justify-center">
-                  <div className="org-box bg-cameroon-green text-white">
+                  <div className="relative px-8 py-4 rounded-lg min-w-[160px] text-center font-semibold shadow-md z-10 bg-cameroon-green text-white">
                     Lord Mayor
                   </div>
                 </div>
 
                 {/* Level 2 - Deputy Mayors */}
                 <div className="flex justify-center gap-40 mt-8">
-                  <div className="org-box bg-cameroon-red text-white">
+                  <div className="relative px-8 py-4 rounded-lg min-w-[160px] text-center font-semibold shadow-md z-10 bg-cameroon-red text-white before:content-[''] before:absolute before:top-[-20px] before:left-1/2 before:h-5 before:w-0.5 before:bg-slate-300 before:z-0">
                     1st Deputy Mayor
                   </div>
-                  <div className="org-box bg-cameroon-red text-white">
+                  <div className="relative px-8 py-4 rounded-lg min-w-[160px] text-center font-semibold shadow-md z-10 bg-cameroon-red text-white before:content-[''] before:absolute before:top-[-20px] before:left-1/2 before:h-5 before:w-0.5 before:bg-slate-300 before:z-0">
                     2nd Deputy Mayor
                   </div>
                 </div>
 
                 {/* Level 3 - Secretary General */}
                 <div className="flex justify-center mt-8">
-                  <div className="org-box bg-blue-600 text-white">
+                  <div className="relative px-8 py-4 rounded-lg min-w-[160px] text-center font-semibold shadow-md z-10 bg-blue-600 text-white before:content-[''] before:absolute before:top-[-20px] before:left-1/2 before:h-5 before:w-0.5 before:bg-slate-300 before:z-0">
                     Secretary General
                   </div>
                 </div>
 
                 {/* Level 4 - Main Departments */}
                 <div className="flex justify-center gap-4 mt-8">
-                  <div className="org-box bg-gray-700 text-white">
-                    General Affairs
-                  </div>
-                  <div className="org-box bg-gray-700 text-white">
-                    Technical Services
-                  </div>
-                  <div className="org-box bg-gray-700 text-white">
-                    Financial Services
-                  </div>
-                  <div className="org-box bg-gray-700 text-white">
-                    Social Affairs
-                  </div>
+                  {["General Affairs", "Technical Services", "Financial Services", "Social Affairs"].map((dept) => (
+                    <div key={dept} className="relative px-8 py-4 rounded-lg min-w-[160px] text-center font-semibold shadow-md z-10 bg-gray-700 text-white before:content-[''] before:absolute before:top-[-20px] before:left-1/2 before:h-5 before:w-0.5 before:bg-slate-300 before:z-0">
+                      {dept}
+                    </div>
+                  ))}
                 </div>
 
                 {/* Level 5 - Sub Departments */}
                 <div className="flex justify-center gap-2 mt-8 flex-wrap">
-                  <div className="org-box bg-gray-500 text-white">
-                    Human Resources
-                  </div>
-                  <div className="org-box bg-gray-500 text-white">
-                    Civil Status
-                  </div>
-                  <div className="org-box bg-gray-500 text-white">
-                    Infrastructure
-                  </div>
-                  <div className="org-box bg-gray-500 text-white">
-                    Revenue
-                  </div>
-                  <div className="org-box bg-gray-500 text-white">
-                    Accounting
-                  </div>
-                  <div className="org-box bg-gray-500 text-white">
-                    Community Dev.
-                  </div>
+                  {["Human Resources", "Civil Status", "Infrastructure", "Revenue", "Accounting", "Community Dev."].map((subDept) => (
+                    <div key={subDept} className="relative px-8 py-4 rounded-lg min-w-[160px] text-center font-semibold shadow-md z-10 bg-gray-500 text-white before:content-[''] before:absolute before:top-[-20px] before:left-1/2 before:h-5 before:w-0.5 before:bg-slate-300 before:z-0">
+                      {subDept}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -121,45 +100,6 @@ const ExecutiveOffices = () => {
       </main>
 
       <Footer />
-
-      <style jsx>{`
-        .organigram {
-          position: relative;
-        }
-        .organigram::before {
-          content: '';
-          position: absolute;
-          top: 60px;
-          left: 50%;
-          height: calc(100% - 100px);
-          width: 2px;
-          background: #cbd5e1;
-          z-index: 0;
-        }
-        .org-box {
-          position: relative;
-          padding: 1rem 2rem;
-          border-radius: 0.5rem;
-          min-width: 160px;
-          text-align: center;
-          font-weight: 600;
-          box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-          z-index: 1;
-        }
-        .org-box::before {
-          content: '';
-          position: absolute;
-          top: -20px;
-          left: 50%;
-          height: 20px;
-          width: 2px;
-          background: #cbd5e1;
-          z-index: 0;
-        }
-        .org-box:first-child::before {
-          display: none;
-        }
-      `}</style>
     </div>
   );
 };
