@@ -21,8 +21,6 @@ const App = () => (
     <ErrorBoundary>
       <LanguageProvider>
         <TooltipProvider>
-          <Toaster />
-          <Sonner />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/admin-dtima/*" element={<Admin />} />
@@ -30,10 +28,13 @@ const App = () => (
             <Route path="/government/meet-mayor" element={<MeetTheMayor />} />
             <Route path="/government/mayor-biography" element={<MayorBiography />} />
             <Route path="/government/executive-offices" element={<ExecutiveOffices />} />
+            <Route path="/tourism" element={<Tourism />} />
             <Route path="/practical-guide" element={<PracticalGuide />} />
             <Route path="/residents-guide" element={<ResidentsGuide />} />
             <Route path="/business/investment" element={<InvestmentOpportunities />} />
           </Routes>
+          <Toaster />
+          <Sonner />
         </TooltipProvider>
       </LanguageProvider>
     </ErrorBoundary>
