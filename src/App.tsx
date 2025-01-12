@@ -17,8 +17,8 @@ import ResidentsGuide from "./pages/ResidentsGuide";
 import InvestmentOpportunities from "./pages/InvestmentOpportunities";
 
 const App = () => (
-  <ErrorBoundary>
-    <BrowserRouter>
+  <BrowserRouter>
+    <ErrorBoundary>
       <LanguageProvider>
         <TooltipProvider>
           <Routes>
@@ -37,8 +37,8 @@ const App = () => (
           <Sonner />
         </TooltipProvider>
       </LanguageProvider>
-    </BrowserRouter>
-  </ErrorBoundary>
+    </ErrorBoundary>
+  </BrowserRouter>
 );
 
 export default App;
